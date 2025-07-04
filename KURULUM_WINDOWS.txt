@@ -1,0 +1,40 @@
+DENSARA PERSONEL TAKİP - Windows Kurulum Rehberi
+===============================================
+
+1. Python Kurulumu
+------------------
+- https://www.python.org/downloads/windows/ adresinden Python 3.10 veya üzeri sürümü indirin ve kurun.
+- Kurulum sırasında "Add Python to PATH" seçeneğini işaretleyin.
+
+2. Proje Dosyalarını Açın
+-------------------------
+- Size gönderilen .zip veya .rar dosyasını bir klasöre çıkartın.
+- Klasörün içinde `app.py`, `requirements.txt` ve diğer dosyalar olmalı.
+
+3. Gerekli Kütüphaneleri Kurun
+------------------------------
+- Başlat menüsünden "Komut İstemi" (cmd) veya "PowerShell" açın.
+- Proje klasörüne geçin. Örneğin:
+  cd C:\Users\KULLANICI_ADI\Masaüstü\takip
+- Şu komutu yazın:
+  pip install -r requirements.txt
+
+4. Programı Başlatın
+--------------------
+- Komut satırında şunu yazın:
+  python app.py
+- "* Running on http://127.0.0.1:5000" mesajını göreceksiniz.
+- Tarayıcıda http://localhost:5000 adresine girin.
+
+5. Kullanım
+-----------
+- Programı kullanmaya başlayabilirsiniz.
+- Excel raporları ve veriler aynı klasörde saklanır.
+
+Notlar:
+------
+- Eğer eski veri dosyaları (ör. puantaj_data.json, calisanlar.json) varsa, onları da aynı klasöre kopyalayın.
+- Programı kapatmak için komut satırında Ctrl+C tuşlarına basabilirsiniz.
+- Herhangi bir hata veya eksik kütüphane olursa, hata mesajını bana iletebilirsiniz.
+
+Başarılar! 
