@@ -1365,8 +1365,6 @@ def taseron_rapor():
         return send_file(dosya, as_attachment=True)
     return render_template_string(taseron_rapor_form_page, taseronlar=taseronlar, session=session)
 
-if __name__ == '__main__':
-    app.run(debug=True) 
 @app.route('/', methods=['GET', 'POST'])
 def login():
     error = None
@@ -1385,3 +1383,5 @@ def menu():
     if 'logged_in' not in session:
         return redirect(url_for('login'))
     return render_template_string(menu_page, session=session)
+  if __name__ == '__main__':
+    app.run(debug=True)
