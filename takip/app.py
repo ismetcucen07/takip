@@ -1367,3 +1367,21 @@ def taseron_rapor():
 
 if __name__ == '__main__':
     app.run(debug=True) 
+@app.route('/', methods=['GET', 'POST'])
+def login():
+    error = None
+    if 'logged_in' in session:
+        return redirect(url_for('menu'))
+    if request.method == 'POST':
+        if request.form['password'] == ADMIN_PASSWORD:
+            session['logged_in'] = True
+            return redirect(url_for('menu'))
+        else:
+            error = 'Hatalı şifre!'
+    return render_template_string(login_page, error=error, session=session)
+
+@app.route('/menu')
+def menu():
+    if 'logged_in' not in session:
+        return redirect(url_for('login'))
+    return render_template_string(menu_page, session=session)
